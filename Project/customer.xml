@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+
+<website>
+    <customer>
+        <firstname>Alex</firstname>
+        <lastname>Lee</lastname>
+        <contact>012345</contact>
+        <email>haha@gmial.com</email>
+        <adress>No1,Taman Kajang,43000,Kajang Selangor</adress>
+        <city>kajang</city>
+        <state>Selangor</state>
+        
+
+
+
+
+    </customer>
+</website>

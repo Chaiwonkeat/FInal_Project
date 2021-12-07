@@ -1,0 +1,42 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <p>Customer Name:<span id="customer_name"></span></p>
+        <p>Customer Contact:<span id="customer_contact"></span></p>
+        <p>Customer Email:<span id="customer_email"></span></p>
+        <p>Customer Adress:<span id="customer_adress"></span></p>
+        <p>Customer City:<span id="customer_city"></span></p>
+        <p>Customer State:<span id="customer_state"></span></p>
+      
+    </body>
+<script>
+    var http_request = new XMLHttpRequest(); //define object xml request
+            var data_file ="customer.xml"; // define the path of file
+
+            http_request.open("GET",data_file,false);  // open file to get the data
+            http_request.send(); // send to server  
+            xmlDoc=http_request.responseXML;  // response the xml to us
+            
+
+
+
+
+            document.getElementById("customer_name").innerHTML= 
+            xmlDoc.getElementsByTagName("firstname")[0].childNodes[0].nodeValue;  
+            document.getElementById("customer_contact").innerHTML= 
+            xmlDoc.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
+            document.getElementById("customer_email").innerHTML= 
+            xmlDoc.getElementsByTagName("email")[0].childNodes[0].nodeValue;
+            document.getElementById("customer_adress").innerHTML= 
+            xmlDoc.getElementsByTagName("adress")[0].childNodes[0].nodeValue;
+            document.getElementById("customer_city").innerHTML= 
+            xmlDoc.getElementsByTagName("city")[0].childNodes[0].nodeValue;
+            document.getElementById("customer_state").innerHTML= 
+            xmlDoc.getElementsByTagName("state")[0].childNodes[0].nodeValue;
+           
+
+
+</script>
+</html>
