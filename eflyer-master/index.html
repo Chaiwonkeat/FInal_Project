@@ -35,27 +35,54 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style>
+         div.stars {
+         width: 270px;
+         display: inline-block
+      }
+
+      input.star {
+         display: none
+      }
+
+      label.star {
+         float: right;
+         padding: 10px;
+         font-size: 36px;
+         color: #FD4;
+         transition: all .2s
+      }
+
+      input.star:checked~label.star:before {
+         content: '\f005';
+         color: #FD4;
+         transition: all .25s
+      }
+
+      input.star-5:checked~label.star:before {
+         color: #FE7;
+         text-shadow: 0 0 20px #952
+      }
+
+      input.star-1:checked~label.star:before {
+         color: #F62
+      }
+
+      label.star:hover {
+         transform: rotate(-15deg) scale(1.3)
+      }
+
+      label.star:before {
+         content: '\f006';
+         font-family: FontAwesome;
+      }
+   </style>
    </head>
    <body>
       <!-- banner bg main start -->
       <div class="banner_bg_main">
          <!-- header top section start -->
          <div class="container">
-            <div class="header_section_top">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="custom_menu">
-                        <ul>
-                           <li><a href="#">Best Sellers</a></li>
-                           <li><a href="#">Gift Ideas</a></li>
-                           <li><a href="#">New Releases</a></li>
-                           <li><a href="#">Today's Deals</a></li>
-                           <li><a href="#">Customer Service</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
          </div>
          <!-- header top section start -->
          <!-- logo section start -->
@@ -76,20 +103,13 @@
                   <div id="mySidenav" class="sidenav">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                      <a href="index.html">Home</a>
-                     <a href="fashion.html">Fashion</a>
-                     <a href="electronic.html">Electronic</a>
-                     <a href="jewellery.html">Jewellery</a>
+                     <a href="fashion.html">News</a>
+                     <a href="electronic.html">Men</a>
+                     <a href="jewellery.html">Women</a>
+                     <a href="#">About</a>
+                     <a href="#">Contact</a>
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
-                  <div class="dropdown">
-                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category 
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                     </div>
-                  </div>
                   <div class="main">
                      <!-- Another variation with a button -->
                      <div class="input-group">
@@ -102,17 +122,6 @@
                      </div>
                   </div>
                   <div class="header_box">
-                     <div class="lang_box ">
-                        <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-                        <img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
-                        </a>
-                        <div class="dropdown-menu ">
-                           <a href="#" class="dropdown-item">
-                           <img src="images/flag-france.png" class="mr-2" alt="flag">
-                           French
-                           </a>
-                        </div>
-                     </div>
                      <div class="login_menu">
                         <ul>
                            <li><a href="#">
@@ -121,7 +130,7 @@
                            </li>
                            <li><a href="#">
                               <i class="fa fa-user" aria-hidden="true"></i>
-                              <span class="padding_10">Cart</span></a>
+                              <span class="padding_10">Login</span></a>
                            </li>
                         </ul>
                      </div>
@@ -138,7 +147,7 @@
                      <div class="carousel-item active">
                         <div class="row">
                            <div class="col-sm-12">
-                              <h1 class="banner_taital">Get Start <br>Your favriot shoping</h1>
+                              <h1 class="banner_taital">Welcome To See It <br>Free Shopping</h1>
                               <div class="buynow_bt"><a href="#">Buy Now</a></div>
                            </div>
                         </div>
@@ -146,7 +155,7 @@
                      <div class="carousel-item">
                         <div class="row">
                            <div class="col-sm-12">
-                              <h1 class="banner_taital">Get Start <br>Your favriot shoping</h1>
+                              <h1 class="banner_taital">News Product</h1>
                               <div class="buynow_bt"><a href="#">Buy Now</a></div>
                            </div>
                         </div>
@@ -154,7 +163,15 @@
                      <div class="carousel-item">
                         <div class="row">
                            <div class="col-sm-12">
-                              <h1 class="banner_taital">Get Start <br>Your favriot shoping</h1>
+                              <h1 class="banner_taital">Men Product</h1>
+                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Women Product</h1>
                               <div class="buynow_bt"><a href="#">Buy Now</a></div>
                            </div>
                         </div>
@@ -178,14 +195,23 @@
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
-                     <h1 class="fashion_taital">Man & Woman Fashion</h1>
+                     <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Man T -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <h4 class="shirt_text">Men Graphic-T</h4>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -194,9 +220,18 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Man -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <h4 class="shirt_text">Men Shirt</h4>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM49</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -206,8 +241,17 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Woman Scart</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM59</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -220,14 +264,23 @@
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="fashion_taital">Man & Woman Fashion</h1>
+                     <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Man T -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <h4 class="shirt_text">Men Graphic-T</h4>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -236,9 +289,18 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Man -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <h4 class="shirt_text">Men Shirt</h4>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM49</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -248,8 +310,17 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Woman Scart</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM59</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -262,14 +333,23 @@
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="fashion_taital">Man & Woman Fashion</h1>
+                     <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Man T -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <h4 class="shirt_text">Men Graphic-T</h4>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -278,9 +358,18 @@
                            </div>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Man -shirt</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
+                                 <h4 class="shirt_text">Men Shirt</h4>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM49</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -290,8 +379,17 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Woman Scart</h4>
-                                 <p class="price_text">Price  <span style="color: #262626;">$ 30</span></p>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM59</span></p>
+                                 <div class="container d-flex justify-content-center">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="stars">
+                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -302,6 +400,7 @@
                      </div>
                   </div>
                </div>
+
             </div>
             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
             <i class="fa fa-angle-left"></i>
@@ -318,14 +417,14 @@
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
-                     <h1 class="fashion_taital">Electronic</h1>
+                     <h1 class="fashion_taital">Men</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/laptop-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -335,8 +434,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Mobile</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/mobile-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -346,8 +445,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Computers</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/computer-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -360,14 +459,14 @@
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="fashion_taital">Electronic</h1>
+                     <h1 class="fashion_taital">Men</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/laptop-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -377,8 +476,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Mobile</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/mobile-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -388,8 +487,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Computers</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/computer-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -402,14 +501,14 @@
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="fashion_taital">Electronic</h1>
+                     <h1 class="fashion_taital">Men</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Laptop</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/laptop-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -419,8 +518,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Mobile</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/mobile-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -430,8 +529,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Computers</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="electronic_img"><img src="images/computer-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -442,6 +541,7 @@
                      </div>
                   </div>
                </div>
+
             </div>
             <a class="carousel-control-prev" href="#electronic_main_slider" role="button" data-slide="prev">
             <i class="fa fa-angle-left"></i>
@@ -458,14 +558,14 @@
             <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
-                     <h1 class="fashion_taital">Jewellery Accessories</h1>
+                     <h1 class="fashion_taital">Women</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Jumkas</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -475,8 +575,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Necklaces</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -486,8 +586,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Kangans</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -500,14 +600,14 @@
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="fashion_taital">Jewellery Accessories</h1>
+                     <h1 class="fashion_taital">Women</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Jumkas</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -517,8 +617,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Necklaces</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -528,8 +628,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Kangans</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -542,14 +642,14 @@
                </div>
                <div class="carousel-item">
                   <div class="container">
-                     <h1 class="fashion_taital">Jewellery Accessories</h1>
+                     <h1 class="fashion_taital">Women</h1>
                      <div class="fashion_section_2">
                         <div class="row">
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Jumkas</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -559,8 +659,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Necklaces</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -570,8 +670,8 @@
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Kangans</h4>
-                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -605,24 +705,17 @@
             </div>
             <div class="footer_menu">
                <ul>
-                  <li><a href="#">Best Sellers</a></li>
-                  <li><a href="#">Gift Ideas</a></li>
-                  <li><a href="#">New Releases</a></li>
-                  <li><a href="#">Today's Deals</a></li>
-                  <li><a href="#">Customer Service</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
                </ul>
             </div>
-            <div class="location_main">Help Line  Number : <a href="#">+1 1800 1200 1200</a></div>
+            <div class="location_main">Help Line  Number : <a href="#">(+060) 120 2200</a></div>
          </div>
       </div>
       <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">© 2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
-         </div>
-      </div>
-      <!-- copyright section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
