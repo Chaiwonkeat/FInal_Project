@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Eflyer</title>
+      <title>Jewellery</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -35,28 +35,92 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-   </head>
+      <style>
+        body {
+            color: #999;
+            background: #fafafa;
+            font-family: 'Roboto', sans-serif;
+        }
+        .form-control {
+            min-height: 41px;
+            box-shadow: none;
+            border-color: #e6e6e6;
+        }
+        .form-control:focus {
+            border-color: #00c1c0;
+        }
+        .form-control, .btn {        
+            border-radius: 3px;
+        }
+        .signup-form {
+            width: 550px;
+            margin: 0 auto;
+            padding: 30px 0;
+            padding-top:550px;
+        }
+        .signup-form h2 {
+            color: #333;
+            font-weight: bold;
+            margin: 0 0 25px;
+              text-align: center;
+        }
+        .signup-form h5 {
+            color: black;
+        }
+        .signup-form form {
+            margin-bottom: 15px;
+            background: #fff;
+            border: 1px solid #f4f4f4;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 40px 100px;
+        }
+        .signup-form .form-group {
+            margin-bottom: 20px;
+        }
+        .signup-form label {
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .signup-form input[type="checkbox"] {
+            position: relative;
+            top: 1px;
+        }    
+        .signup-form .btn, .signup-form .btn:active {        
+            font-size: 16px;
+            font-weight: bold;
+            background: #00c1c0 !important;
+            border: none;
+            min-width: 140px;
+        }
+        .signup-form .btn:hover, .signup-form .btn:focus {
+            background: #00b3b3 !important;
+         }
+        .signup-form a {
+            color: #00c1c0;
+            text-decoration: none;
+         }	
+        .signup-form a:hover {
+            text-decoration: underline;
+         }
+        .form-group{
+            text-align: center;
+         }
+        .tex{
+            text-align: center;
+         }
+         .ter{
+            padding-bottom:40px;
+         }
+         .bot{
+            padding: 8px 80px;
+         }
+        </style>
+    </head>
    <body>
       <!-- banner bg main start -->
       <div class="banner_bg_main">
          <!-- header top section start -->
-         <div class="container">
-            <div class="header_section_top">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="custom_menu">
-                        <ul>
-                           <li><a href="#">Best Sellers</a></li>
-                           <li><a href="#">Gift Ideas</a></li>
-                           <li><a href="#">New Releases</a></li>
-                           <li><a href="#">Today's Deals</a></li>
-                           <li><a href="#">Customer Service</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+         
          <!-- header top section start -->
          <!-- logo section start -->
          <div class="logo_section">
@@ -76,20 +140,13 @@
                   <div id="mySidenav" class="sidenav">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                      <a href="index.html">Home</a>
-                     <a href="fashion.html">Fashion</a>
-                     <a href="electronic.html">Electronic</a>
-                     <a href="jewellery.html">Jewellery</a>
+                     <a href="news.html">News</a>
+                     <a href="men.html">Men</a>
+                     <a href="women.html">Women</a>
+                     <a href="#">About</a>
+                     <a href="#">Contact</a>
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
-                  <div class="dropdown">
-                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category 
-                     </button>
-                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                     </div>
-                  </div>
                   <div class="main">
                      <!-- Another variation with a button -->
                      <div class="input-group">
@@ -102,17 +159,6 @@
                      </div>
                   </div>
                   <div class="header_box">
-                     <div class="lang_box ">
-                        <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-                        <img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
-                        </a>
-                        <div class="dropdown-menu ">
-                           <a href="#" class="dropdown-item">
-                           <img src="images/flag-france.png" class="mr-2" alt="flag">
-                           French
-                           </a>
-                        </div>
-                     </div>
                      <div class="login_menu">
                         <ul>
                            <li><a href="#">
@@ -121,7 +167,7 @@
                            </li>
                            <li><a href="#">
                               <i class="fa fa-user" aria-hidden="true"></i>
-                              <span class="padding_10">Cart</span></a>
+                              <span class="padding_10">Login</span></a>
                            </li>
                         </ul>
                      </div>
@@ -171,53 +217,71 @@
          </div>
          <!-- banner section end -->
       </div>
-      
-
-
+      <!-- banner bg main end -->
+      <!-- jewellery  section start -->
+      <div class="signup-form">
+         <form action="/examples/actions/confirmation.php" method="post">
+           <h2>Log In</h2>
+           <h5>E-mail</h5>
+             <div class="form-group tex">
+                <input type="email" class="form-control" name="email" placeholder="E-mail" required="required">
+             </div>
+           <h5>Password</h5>
+           <div class="form-group tex">
+                 <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+             </div>
+              <div class="form-group ter">
+               <a class="float-right" href="#">Forgotten password!</a>
+              <label class="form-check-label float-left"><input type="checkbox" required="required"> Remember me</label>
+           </div>
+             <div class="form-group tex">
+              <label class="form-check-label"><input type="checkbox" required="required"> By logging in, you agree to the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+           </div>
+           <div class="form-group tex">
+                 <button type="submit" class="btn btn-primary btn-lg bot" style="font-size: 25px;">LOG IN</button>
+             </div>
+           <div class="text-center">No a member? <a href="#">Join us</a></div>
+         </form>
+     </div>
+      <!-- jewellery  section end -->
+      <!-- footer section start -->
       <div class="footer_section layout_padding">
-        <div class="container">
-           <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
-           <div class="input_bt">
-              <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
-              <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
-           </div>
-           <div class="footer_menu">
-              <ul>
-                 <li><a href="#">Best Sellers</a></li>
-                 <li><a href="#">Gift Ideas</a></li>
-                 <li><a href="#">New Releases</a></li>
-                 <li><a href="#">Today's Deals</a></li>
-                 <li><a href="#">Customer Service</a></li>
-              </ul>
-           </div>
-           <div class="location_main">Help Line  Number : <a href="#">+1 1800 1200 1200</a></div>
-        </div>
-     </div>
-     <!-- footer section end -->
-     <!-- copyright section start -->
-     <div class="copyright_section">
-        <div class="container">
-           <p class="copyright_text">© 2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
-        </div>
-     </div>
-     <!-- copyright section end -->
-     <!-- Javascript files-->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/popper.min.js"></script>
-     <script src="js/bootstrap.bundle.min.js"></script>
-     <script src="js/jquery-3.0.0.min.js"></script>
-     <script src="js/plugin.js"></script>
-     <!-- sidebar -->
-     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-     <script src="js/custom.js"></script>
-     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-     </script>
-  </body>
+         <div class="container">
+            <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
+            <div class="input_bt">
+               <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
+               <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
+            </div>
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="men.html">Men</a></li>
+                  <li><a href="women.html">Women</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+               </ul>
+            </div>
+            <div class="location_main">Help Line  Number : <a href="#">(+060) 120 2200</a></div>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+   </body>
 </html>
