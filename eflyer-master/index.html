@@ -36,56 +36,30 @@
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <style>
-         div.stars {
-         width: 270px;
-         display: inline-block
-      }
+         .star-icon {
+            color: #ffe400;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 20px 0;
+            }
+            .rating-css label {
+            font-size: 30px;
+            text-shadow: 1px 1px 0 #ffe400;
+            cursor: pointer;
+            }
 
-      input.star {
-         display: none
-      }
-
-      label.star {
-         float: right;
-         padding: 10px;
-         font-size: 36px;
-         color: #FD4;
-         transition: all .2s
-      }
-
-      input.star:checked~label.star:before {
-         content: '\f005';
-         color: #FD4;
-         transition: all .25s
-      }
-
-      input.star-5:checked~label.star:before {
-         color: #FE7;
-         text-shadow: 0 0 20px #952
-      }
-
-      input.star-1:checked~label.star:before {
-         color: #F62
-      }
-
-      label.star:hover {
-         transform: rotate(-15deg) scale(1.3)
-      }
-
-      label.star:before {
-         content: '\f006';
-         font-family: FontAwesome;
-      }
-   </style>
+            .rating-css label:active {
+            transform: scale(0.8);
+            transition: 0.3s ease;
+            }
+      </style>
    </head>
    <body>
       <!-- banner bg main start -->
       <div class="banner_bg_main">
-         <!-- header top section start -->
-         <div class="container">
-         </div>
-         <!-- header top section start -->
-         <!-- logo section start -->
          <div class="logo_section">
             <div class="container">
                <div class="row">
@@ -103,9 +77,9 @@
                   <div id="mySidenav" class="sidenav">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                      <a href="index.html">Home</a>
-                     <a href="fashion.html">News</a>
-                     <a href="electronic.html">Men</a>
-                     <a href="jewellery.html">Women</a>
+                     <a href="news.html">News</a>
+                     <a href="men.html">Men</a>
+                     <a href="women.html">Women</a>
                      <a href="#">About</a>
                      <a href="#">Contact</a>
                   </div>
@@ -148,31 +122,31 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <h1 class="banner_taital">Welcome To See It <br>Free Shopping</h1>
-                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                              <div class="buynow_bt"><a href="#">SHOP NOW</a></div>
                            </div>
                         </div>
                      </div>
                      <div class="carousel-item">
                         <div class="row">
                            <div class="col-sm-12">
-                              <h1 class="banner_taital">News Product</h1>
-                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                              <h1 class="banner_taital">News <br>Product</h1>
+                              <div class="buynow_bt"><a href="news.html">SHOP NOW</a></div>
                            </div>
                         </div>
                      </div>
                      <div class="carousel-item">
                         <div class="row">
                            <div class="col-sm-12">
-                              <h1 class="banner_taital">Men Product</h1>
-                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                              <h1 class="banner_taital">Men <br>Product</h1>
+                              <div class="buynow_bt"><a href="men.html">SHOP NOW</a></div>
                            </div>
                         </div>
                      </div>
                      <div class="carousel-item">
                         <div class="row">
                            <div class="col-sm-12">
-                              <h1 class="banner_taital">Women Product</h1>
-                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                              <h1 class="banner_taital">Women <br>Product</h1>
+                              <div class="buynow_bt"><a href="women.html">SHOP NOW</a></div>
                            </div>
                         </div>
                      </div>
@@ -203,15 +177,15 @@
                                  <h4 class="shirt_text">Men Graphic-T</h4>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -223,15 +197,15 @@
                                  <h4 class="shirt_text">Men Shirt</h4>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM49</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -243,15 +217,15 @@
                                  <h4 class="shirt_text">Woman Scart</h4>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM59</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -272,15 +246,14 @@
                                  <h4 class="shirt_text">Men Graphic-T</h4>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -292,15 +265,14 @@
                                  <h4 class="shirt_text">Men Shirt</h4>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM49</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -312,15 +284,14 @@
                                  <h4 class="shirt_text">Woman Scart</h4>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM59</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -341,15 +312,14 @@
                                  <h4 class="shirt_text">Men Graphic-T</h4>
                                  <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -361,15 +331,14 @@
                                  <h4 class="shirt_text">Men Shirt</h4>
                                  <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM49</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -381,15 +350,14 @@
                                  <h4 class="shirt_text">Woman Scart</h4>
                                  <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM59</span></p>
-                                 <div class="container d-flex justify-content-center">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="stars">
-                                                <form action=""> <input class="star star-5 star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> <input class="star star-4" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> <input class="star star-3" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> <input class="star star-2" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> <input class="star star-1" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> </form>
-                                            </div>
-                                        </div>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
                                     </div>
-                                </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -425,6 +393,15 @@
                                  <h4 class="shirt_text">Laptop</h4>
                                  <div class="electronic_img"><img src="images/laptop-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -436,6 +413,15 @@
                                  <h4 class="shirt_text">Mobile</h4>
                                  <div class="electronic_img"><img src="images/mobile-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -447,6 +433,15 @@
                                  <h4 class="shirt_text">Computers</h4>
                                  <div class="electronic_img"><img src="images/computer-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -467,6 +462,15 @@
                                  <h4 class="shirt_text">Laptop</h4>
                                  <div class="electronic_img"><img src="images/laptop-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -478,6 +482,15 @@
                                  <h4 class="shirt_text">Mobile</h4>
                                  <div class="electronic_img"><img src="images/mobile-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -489,6 +502,14 @@
                                  <h4 class="shirt_text">Computers</h4>
                                  <div class="electronic_img"><img src="images/computer-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -509,6 +530,15 @@
                                  <h4 class="shirt_text">Laptop</h4>
                                  <div class="electronic_img"><img src="images/laptop-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -520,6 +550,14 @@
                                  <h4 class="shirt_text">Mobile</h4>
                                  <div class="electronic_img"><img src="images/mobile-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -531,6 +569,14 @@
                                  <h4 class="shirt_text">Computers</h4>
                                  <div class="electronic_img"><img src="images/computer-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -566,6 +612,14 @@
                                  <h4 class="shirt_text">Jumkas</h4>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -577,6 +631,14 @@
                                  <h4 class="shirt_text">Necklaces</h4>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -588,6 +650,14 @@
                                  <h4 class="shirt_text">Kangans</h4>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -608,6 +678,15 @@
                                  <h4 class="shirt_text">Jumkas</h4>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -619,6 +698,14 @@
                                  <h4 class="shirt_text">Necklaces</h4>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -630,6 +717,15 @@
                                  <h4 class="shirt_text">Kangans</h4>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating3" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -650,6 +746,14 @@
                                  <h4 class="shirt_text">Jumkas</h4>
                                  <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -661,6 +765,14 @@
                                  <h4 class="shirt_text">Necklaces</h4>
                                  <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -672,6 +784,14 @@
                                  <h4 class="shirt_text">Kangans</h4>
                                  <div class="jewellery_img"><img src="images/kangan-img.png"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <div class="rating-css">
+                                    <div class="star-icon">
+                                      <label for="rating1" class="fa fa-star"></label>
+                                      <label for="rating2" class="fa fa-star"></label>
+                                      <label for="rating4" class="fa fa-star"></label>
+                                      <label for="rating5" class="fa fa-star"></label>
+                                    </div>
+                                  </div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="#">See More</a></div>
@@ -705,9 +825,9 @@
             </div>
             <div class="footer_menu">
                <ul>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Men</a></li>
-                  <li><a href="#">Women</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="men.html">Men</a></li>
+                  <li><a href="women.html">Women</a></li>
                   <li><a href="#">About</a></li>
                   <li><a href="#">Contact</a></li>
                </ul>

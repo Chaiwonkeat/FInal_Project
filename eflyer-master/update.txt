@@ -1,2 +1,5 @@
 // won keat
 -modify layout (add review star ,  change footer, menu, price positon)
+
+// won keat
+update all link (on working) all pages same layout and modify the rating star.
