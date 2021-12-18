@@ -1,3 +1,16 @@
+<?php
+if(isset($_POST['submitSave'])) {
+	$signup = simplexml_load_file('signup.xml');
+	$product = $signup->addChild('members');
+	$product->addChild('name', $_POST['name']);
+	$product->addChild('email', $_POST['email']);
+	$product->addChild('password', $_POST['password']);
+	$product->addChild('repeat_password', $_POST['repeat_password']);
+	file_put_contents('signup.xml', $signup->asXML());
+	//header('location:index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -214,7 +227,7 @@
       <!-- banner bg main end -->
       <!-- jewellery  section start -->
       <div class="signup-form">
-         <form action="/eflyer-master/signup/signup.php" method="post">
+         <form action="index.html" method="post">
                <h2>Sign Up</h2>
          <h5>Name</h5>
                <div class="form-group">
@@ -236,7 +249,7 @@
                   <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
                </div>
                <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-lg bot" style="font-size: 20px;">CREATE ACCOUNT</button>
+                  <button type="submit" class="btn btn-primary btn-lg bot" name="submitSave" style="font-size: 20px;">CREATE ACCOUNT</button>
                </div>
          <div class="text-center">Already have an account? <a href="login.html">Log in</a></div>
          </form>
