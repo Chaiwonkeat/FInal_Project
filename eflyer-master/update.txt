@@ -4,5 +4,13 @@
 // won keat
 update all link (on working) all pages same layout and modify the rating star.
 
+<<<<<<< HEAD
 // Yuet hua
 -modify layout (signup and login)
+=======
+//wonkeat
+update all images and insert into the layout.
+men,women,new,pages layout done.
+
+// 14/12/2021 - done with ewallet and alertjs
+>>>>>>> ec3ec2e3fe1e0b013d86067e9fcd23b1dec75f07
