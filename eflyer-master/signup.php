@@ -227,7 +227,7 @@ if(isset($_POST['submitSave'])) {
       <!-- banner bg main end -->
       <!-- jewellery  section start -->
       <div class="signup-form">
-         <form action="index.html" method="post">
+         <form action="" method="post">
                <h2>Sign Up</h2>
          <h5>Name</h5>
                <div class="form-group">
