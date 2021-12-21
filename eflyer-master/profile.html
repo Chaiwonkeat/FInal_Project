@@ -1,0 +1,21 @@
+<div class="forms">
+    <div class="row">
+        <div class="col-6"> <label class="labels">Name</label><input type="text" class="form-control" readonly value="John"> </div>
+        <div class="col-6"> <label class="labels">Birthday Date</label> <input type="text" class="form-control" readonly value="20-07-19992"> </div>
+    </div>
+    <div class="row">
+        <div class="col-6"> <label class="labels">Gender</label><input type="text" class="form-control" readonly value="John"> </div>
+        <div class="col-6"> <label class="labels">Address</label> <input type="text" class="form-control" readonly value="Doe"> </div>
+    </div>
+    <div class="row">
+        <div class="col-6"> <label class="labels">Email</label><input type="text" class="form-control" readonly value="John"> </div>
+        <div class="col-6"> <label class="labels">Password</label> <input type="text" class="form-control" readonly value="Doe"> </div>
+    </div>
+    <script>
+        var savebutton = document.getElementById('savebutton');
+var readonly = true;
+var inputs = document.querySelectorAll('input[type="text"]');
+savebutton.addEventListener('click',function(){
+
+for (var i=0; i<inputs.length; i++) { inputs[i].toggleAttribute('readonly'); }; if (savebutton.innerHTML=="edit" ) { savebutton.innerHTML="save" ; } else { savebutton.innerHTML="edit" ; } });
+    </script>
