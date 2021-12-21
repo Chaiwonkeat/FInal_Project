@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+<product id="1"><name>Active Tech T-Shirt</name>
+<price>12.00</price>
+  <path>images/news-1.jpg</path>
+</product>
+<product id="2"><name>Active Tech T-Shirt</name>
+<price>12.00</price>
+  <path>images/news-1.jpg</path>
+</product>
+<product id="3"><name>Active Tech T-Shirt</name>
+<price>12.00</price>
+  <path>images/news-1.jpg</path>
+</product>
+</products>

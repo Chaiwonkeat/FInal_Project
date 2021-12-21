@@ -124,12 +124,29 @@
                         <ul>
                            <li><a href="#">
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                              <span class="padding_10">Cart</span></a>
+                         
+                              <span class="padding_10">Cart <span class="badge badge-secondary">     <?php
+               $products = simplexml_load_file('product.xml'); //load the files xml . 
+                echo count($products); // count the number products
+               // echo '<br>List Product Information';
+                ?></span></span></a>
                            </li>
+                           <?php
+
+                           if(!isset($_COOKIE['user'])){?>
                            <li><a href="login.html">
                               <i class="fa fa-user" aria-hidden="true"></i>
                               <span class="padding_10">Login</span></a>
                            </li>
+                           <?php }else{ ?>
+
+                            <li><a href="login.html">
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                              <span class="padding_10"><?php echo $_COOKIE['user']; ?></span></a>
+                           </li>
+
+                           <?php }
+                           ?>
                         </ul>
                      </div>
                   </div>
@@ -252,15 +269,21 @@
                      </div>
                   </div>
                </div>
+               <?php
+               $products = simplexml_load_file('product.xml'); //load the files xml . 
+                echo 'Number of products: '.count($products); // count the number products
+               // echo '<br>List Product Information';
+                ?>
+             
                <div class="carousel-item">
                   <div class="container">
                      <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
-                        <div class="row">
+                        <div class="row">   <?php foreach($products->product as $product) { ?>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text">Slinky Nightie</h4>
-                                 <div class="tshirt_img"><img src="images/news-4.jpg"></div>
+                                 <h4 class="shirt_text"><?php echo $product->name; ?></h4>
+                                 <div class="tshirt_img"><img src="<?php echo $product->path; ?>"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
                                  <div class="rating-css">
                                     <div class="star-icon">
@@ -271,53 +294,19 @@
                                     </div>
                                   </div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
-                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                    <div class="buy_bt"><a href="index.php/?id=<?php echo $product['id']; ?>">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="product_details/?id=<?php echo $product['id']; ?>">See More</a></div>
                                  </div>
                               </div>
                            </div>
-                           <div class="col-lg-4 col-sm-4">
-                              <div class="box_main">
-                                 <h4 class="shirt_text">90S T-Shirt Nightie</h4>
-                                 <div class="tshirt_img"><img src="images/news-5.jpg"></div>
-                                 <p class="price_text">Price : <span style="color: #262626;">RM49</span></p>
-                                 <div class="rating-css">
-                                    <div class="star-icon">
-                                      <label for="rating1" class="fa fa-star"></label>
-                                      <label for="rating2" class="fa fa-star"></label>
-                                      <label for="rating3" class="fa fa-star"></label>
-                                      <label for="rating4" class="fa fa-star"></label>
-                                    </div>
-                                  </div>
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
-                                    <div class="seemore_bt"><a href="#">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-4 col-sm-4">
-                              <div class="box_main">
-                                 <h4 class="shirt_text">Side Gathered Bikini Top</h4>
-                                 <div class="tshirt_img"><img src="images/news-6.jpg"></div>
-                                 <p class="price_text">Price : <span style="color: #262626;">RM59</span></p>
-                                 <div class="rating-css">
-                                    <div class="star-icon">
-                                      <label for="rating1" class="fa fa-star"></label>
-                                      <label for="rating2" class="fa fa-star"></label>
-                                      <label for="rating3" class="fa fa-star"></label>
-                                      <label for="rating4" class="fa fa-star"></label>
-                                    </div>
-                                  </div>
-                                 <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
-                                    <div class="seemore_bt"><a href="#">See More</a></div>
-                                 </div>
-                              </div>
-                           </div>
+                           
+                             <?php } ?>
                         </div>
                      </div>
                   </div>
                </div>
+          
+               <!--second-section-->
                <div class="carousel-item">
                   <div class="container">
                      <h1 class="fashion_taital">News</h1>
@@ -870,4 +859,4 @@
          }
       </script>
    </body>
-</html>
+</html>s

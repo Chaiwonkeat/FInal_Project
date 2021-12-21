@@ -2,4 +2,4 @@
 <member>
 
 
-<members><name>123</name><email>123@hotmail.com</email><password>123</password><repeat_password>123</repeat_password></members></member>
+<members><name>123</name><email>123@hotmail.com</email><password>123</password><repeat_password>123</repeat_password></members><members><name>123</name><email>123@hotmail.com</email><password>123</password><repeat_password>123</repeat_password></members><members><name>123</name><email>123@hotmail.com</email><password>123</password><repeat_password>123</repeat_password></members></member>
