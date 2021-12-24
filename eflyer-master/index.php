@@ -284,7 +284,7 @@
                               <div class="box_main">
                                  <h4 class="shirt_text"><?php echo $product->name; ?></h4>
                                  <div class="tshirt_img"><img src="<?php echo $product->path; ?>"></div>
-                                 <p class="price_text">Price : <span style="color: #262626;">RM30</span></p>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30<?php echo $product->price; ?></span></p>
                                  <div class="rating-css">
                                     <div class="star-icon">
                                       <label for="rating1" class="fa fa-star"></label>
