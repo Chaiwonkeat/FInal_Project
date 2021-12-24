@@ -14,3 +14,6 @@ men,women,new,pages layout done.
 
 // 14/12/2021 - done with ewallet and alertjs
 >>>>>>> ec3ec2e3fe1e0b013d86067e9fcd23b1dec75f07
+
+//wonkeat
+-update all product data in xml file
