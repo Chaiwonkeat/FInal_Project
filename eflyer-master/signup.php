@@ -7,7 +7,7 @@ if(isset($_POST['submitSave'])) {
 	$product->addChild('password', $_POST['password']);
 	$product->addChild('repeat_password', $_POST['repeat_password']);
 	file_put_contents('signup.xml', $signup->asXML());
-	header('location:login/login.php?j='.$_POST['name']);//pass the parameter second ->login page
+	header('location:login.php?j='.$_POST['email']);//pass the parameter second ->login page
 }
 ?>
 

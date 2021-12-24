@@ -5,7 +5,7 @@ if(isset($_POST['submitSave'])) {
 	$product->addChild('email', $_POST['email']);
 	$product->addChild('pass', $_POST['pass']);
 	file_put_contents('login.xml', $signup->asXML());
-	//header('location:index.php');
+	header('location:index.php');
 }
 ?>
 <?php
@@ -22,6 +22,6 @@ if(isset($_GET['j'])){
 
 <form action="" method="post">
 <input type="email" name="email" value="<?php echo $username; ?>">
-<input type="password" name="pass">
+<input type="password" name="pass" value="">
 <button tpye="submit" name="submitSave">Login</button>
 </form>
