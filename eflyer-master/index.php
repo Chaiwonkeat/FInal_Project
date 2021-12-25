@@ -282,9 +282,9 @@
                         <div class="row">   <?php foreach($products->product as $product) { ?>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text"><?php echo $product->name; ?></h4>
-                                 <div class="tshirt_img"><img src="<?php echo $product->path; ?>"></div>
-                                 <p class="price_text">Price : <span style="color: #262626;">RM30<?php echo $product->price; ?></span></p>
+                                 <h4 class="shirt_text"><?php echo $news->name; ?></h4>
+                                 <div class="tshirt_img"><img src="<?php echo $news->path; ?>"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30<?php echo $news->price; ?></span></p>
                                  <div class="rating-css">
                                     <div class="star-icon">
                                       <label for="rating1" class="fa fa-star"></label>
