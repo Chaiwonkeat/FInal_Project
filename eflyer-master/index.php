@@ -279,12 +279,12 @@
                   <div class="container">
                      <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
-                        <div class="row">   <?php foreach($products->product as $product) { ?>
+                        <div class="row">   <?php foreach($products->news as $news) { ?>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text"><?php echo $news->name; ?></h4>
-                                 <div class="tshirt_img"><img src="<?php echo $news->path; ?>"></div>
-                                 <p class="price_text">Price : <span style="color: #262626;">RM30<?php echo $news->price; ?></span></p>
+                                 <h4 class="shirt_text"><?php echo $news->product->name; ?></h4>
+                                 <div class="tshirt_img"><img src="<?php echo $news->product->path; ?>"></div>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM30<?php echo $news->product->price; ?></span></p>
                                  <div class="rating-css">
                                     <div class="star-icon">
                                       <label for="rating1" class="fa fa-star"></label>
@@ -294,8 +294,8 @@
                                     </div>
                                   </div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="index.php/?id=<?php echo $product['id']; ?>">Buy Now</a></div>
-                                    <div class="seemore_bt"><a href="product_details/?id=<?php echo $product['id']; ?>">See More</a></div>
+                                    <div class="buy_bt"><a href="index.php/?id=<?php echo $news['id']; ?>">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="product_details/?id=<?php echo $news['id']; ?>">See More</a></div>
                                  </div>
                               </div>
                            </div>

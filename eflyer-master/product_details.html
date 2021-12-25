@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product details page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">"
+}
+.hover:hover{
+color:lightblue;
+background-color:black;
+}
+.subtitle > p{
+font-size:16pt;
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .1rem 0rem !important;
+    margin-bottom: 0rem;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: .25rem
+}
+.product_name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0px
+}
+.product_price {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 9px;
+    clear: left
+}
+
+.order_info {
+    margin-top: 18px
+}
+.shop-button {
+    height: 45px
+}
+
+.image_selected {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% + 15px);
+    height: 525px;
+    -webkit-transform: translateX(-15px);
+    -moz-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    -o-transform: translateX(-15px);
+    transform: translateX(-15px);
+    border: solid 1px #e8e8e8;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background: #FFFFFF;
+    color: #000000
+}
+ul {
+    list-style: none;
+    margin-bottom: 0px
+}
+
+.row {
+margin-top:auto;
+margin-left:auto;
+margin-right:auto;
+}
+</style>
+</head>
+<body>
+<div class="super_container">
+    <div class="single_product">
+        <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <div class="image_selected"><img src="images/men-1.jpg" alt=""></div>
+                </div>
+                <div class="col-lg-6 order-3">
+                    <div class="product_description">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="men.html">Mens</a></li>
+                                <li class="breadcrumb-item active">Tbar Collab Music T-Shirt</li>
+                            </ol>
+                        </nav>
+                        <div class="product_name">Tbar Collab Music T-Shirt</div>
+                        <div> <span class="product_price">RM29.00</span></div>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row" style="margin-top: 15px;">
+                                <div class="col-xs-6 m-1 " > <span class="product_options">COLOR :&nbsp;&nbsp;</span><button class=" hover btn btn-light btn-sm">WHITE</button> <button class=" hover btn btn-light btn-sm">BLACK</button> <button class=" hover btn btn-light btn-sm">BLUE</button> </div>
+                                <div class="col-xs-6 m-1" > <span class="product_options">SIZE :&nbsp;&nbsp;</span><button class=" hover btn btn-light btn-sm">S</button> <button class=" hover btn btn-light btn-sm">M</button> </div>
+                            </div>
+                        </div>
+                        <div class="order_info d-flex flex-row">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6"> <button type="button" class="btn btn-primary shop-button">Add to Cart</button> <button type="button" class=" btn btn-success shop-button">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class=" row subtitle p-2"><p>Description</p></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="col-md-12">
+                        <tbody>
+                            <tr class="row mt-10">
+                                <td class="col-md-3"><span class="p_specification">Sales Package :</span> </td>
+                                <td class="col-md-8">
+                                    <ul>
+                                        <li>2 in 1 Laptop, Power Adaptor, Active Stylus Pen, User Guide, Warranty Documents</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="row mt-10">
+                                <td class="col-md-3"><span class="p_specification">Model Number :</span> </td>
+                                <td class="col-md-8">
+                                    <ul>
+                                        <li> 14-dh0107TU </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="row mt-10">
+                                <td class="col-md-3"><span class="p_specification">Part Number :</span> </td>
+                                <td class="col-md-8">
+                                    <ul>
+                                        <li>7AL87PA</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="row mt-10">
+                                <td class="col-md-3"><span class="p_specification">Color :</span> </td>
+                                <td class="col-md-8">
+                                    <ul>
+                                        <li>Black</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="row mt-10">
+                                <td class="col-md-3"><span class="p_specification">Suitable for :</span> </td>
+                                <td class="col-md-8">
+                                    <ul>
+                                        <li>Processing & Multitasking</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="row mt-10">
+                                <td class="col-md-3"><span class="p_specification">Processor Brand :</span> </td>
+                                <td class="col-md-8">
+                                    <ul>
+                                        <li>Intel</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

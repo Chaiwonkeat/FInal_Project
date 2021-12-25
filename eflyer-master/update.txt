@@ -17,3 +17,6 @@ men,women,new,pages layout done.
 
 //wonkeat
 -update all product data in xml file
+
+//wonkeat
+-update product details page, test run coding.
