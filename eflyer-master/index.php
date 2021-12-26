@@ -35,6 +35,8 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <style>
          .star-icon {
             color: #ffe400;
@@ -72,10 +74,26 @@
                #jewellery_main_slider .carousel-control-next, #jewellery_main_slider .carousel-control-prev{
                   margin-top:120px;
                }
+               .dropdown{
+					   display:block;
+			   }
             }
             @media (max-width: 575px){
                #jewellery_main_slider .carousel-control-next, #jewellery_main_slider .carousel-control-prev{
                   margin-top: 380px;
+               }
+               .login_menu li{
+					   font-size:14pt;
+			      }
+			      .dropdown{
+				      display:block;
+			      }
+               .login_menu li{
+                  padding-left:0px;
+               }
+               .login_menu ul{
+                  padding:0px;
+                  margin:0px;
                }
             }
 
@@ -140,10 +158,20 @@
                            </li>
                            <?php }else{ ?>
 
-                            <li><a href="login.html">
-                              <i class="fa fa-user" aria-hidden="true"></i>
-                              <span class="padding_10"><?php echo $_COOKIE['user']; ?></span></a>
-                           </li>
+                              <li><a href="login.html">
+                              <i class="fa fa-user" style="display:none;" aria-hidden="true"></i>
+                              <div class="dropdown">
+                                 <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                 <span class="padding_10 "><?php echo $_COOKIE['user']; ?></span>
+                                 </button>
+                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><button class="dropdown-item" type="button">Account</button></li>
+                                    <li><button class="dropdown-item" type="button">Payment</button></li>
+									         <li><button class="dropdown-item" type="button">History</button></li>
+                                    <li><button class="dropdown-item" type="button">Logout</button></li>
+                                 </ul>
+                            </div></a>
+							   </li>
 
                            <?php }
                            ?>
@@ -284,7 +312,7 @@
                               <div class="box_main">
                                  <h4 class="shirt_text"><?php echo $news->product->name; ?></h4>
                                  <div class="tshirt_img"><img src="<?php echo $news->product->path; ?>"></div>
-                                 <p class="price_text">Price : <span style="color: #262626;">RM30<?php echo $news->product->price; ?></span></p>
+                                 <p class="price_text">Price : <span style="color: #262626;">RM<?php echo $news->product->price; ?></span></p>
                                  <div class="rating-css">
                                     <div class="star-icon">
                                       <label for="rating1" class="fa fa-star"></label>

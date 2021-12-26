@@ -20,3 +20,6 @@ men,women,new,pages layout done.
 
 //wonkeat
 -update product details page, test run coding.
+
+//wonkeat
+-update user dropdown menu
