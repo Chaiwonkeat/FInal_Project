@@ -152,12 +152,13 @@
                            <?php
 
                            if(!isset($_COOKIE['user'])){?>
-                           <li><a href="login.html">
+                           <li><a href="login.php">
                               <i class="fa fa-user" aria-hidden="true"></i>
                               <span class="padding_10">Login</span></a>
                            </li>
                            <?php }else{ ?>
 
+<<<<<<< Updated upstream
                               <li><a href="login.html">
                               <i class="fa fa-user" style="display:none;" aria-hidden="true"></i>
                               <div class="dropdown">
@@ -172,6 +173,12 @@
                                  </ul>
                             </div></a>
 							   </li>
+=======
+                            <li><a href="signup.php">
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                              <span class="padding_10"><?php echo $_COOKIE['user']; ?></span></a>
+                           </li>
+>>>>>>> Stashed changes
 
                            <?php }
                            ?>

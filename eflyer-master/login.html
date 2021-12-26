@@ -165,7 +165,7 @@
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               <span class="padding_10">Cart</span></a>
                            </li>
-                           <li><a href="#">
+                           <li><a href="login.php">
                               <i class="fa fa-user" aria-hidden="true"></i>
                               <span class="padding_10">Login</span></a>
                            </li>
@@ -224,11 +224,11 @@
            <h2>Log In</h2>
            <h5>E-mail</h5>
              <div class="form-group tex">
-                <input type="email" class="form-control" name="email" placeholder="E-mail" required="required">
+                <input type="email" class="form-control" name="email" placeholder="E-mail" required="required" value="<?php echo $username; ?>">
              </div>
            <h5>Password</h5>
            <div class="form-group tex">
-                 <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                 <input type="password" class="form-control" name="pass" placeholder="Password" required="required" value="">
              </div>
               <div class="form-group ter">
                <a class="float-right" href="#">Forgotten password!</a>
@@ -238,7 +238,7 @@
               <label class="form-check-label"><input type="checkbox" required="required"> By logging in, you agree to the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
            </div>
            <div class="form-group tex">
-                 <button type="submit" class="btn btn-primary btn-lg bot" style="font-size: 25px;">LOG IN</button>
+                 <button type="submit" class="btn btn-primary btn-lg bot" name="submitSave" style="font-size: 25px;">LOG IN</button>
              </div>
            <div class="text-center">No a member? <a href="signup.php">Join us</a></div>
          </form>
