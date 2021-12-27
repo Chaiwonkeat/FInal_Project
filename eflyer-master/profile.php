@@ -41,17 +41,6 @@
             background: #fafafa;
             font-family: 'Roboto', sans-serif;
         }
-        .form-control {
-            min-height: 41px;
-            box-shadow: none;
-            border-color: #e6e6e6;
-        }
-        .form-control:focus {
-            border-color: #00c1c0;
-        }
-        .form-control, .btn {        
-            border-radius: 3px;
-        }
         .title{
             padding-left: 10%;
             padding-top: 550px;
@@ -223,7 +212,7 @@
             <?php echo $member->password; ?>
             </div>
         </div>
-            <div class="right"><button type="button" class="btn btn-secondary" href="update.php?member=<?php echo $member['member']; ?>">Edit</button></div>
+            <div class="right"><a class="btn btn-secondary" href="index.php" role="button">Edit</a></div>
         <?php } ?>
       </div>
       <!-- jewellery  section end -->

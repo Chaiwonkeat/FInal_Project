@@ -70,6 +70,9 @@
             #jewellery_main_slider .carousel-control-next, #jewellery_main_slider .carousel-control-prev{
                margin-top:150px;
             }
+            .linktext li a{
+               color: #212529 !important;
+            }
             @media (min-width: 768px) and (max-width: 991px){
                #jewellery_main_slider .carousel-control-next, #jewellery_main_slider .carousel-control-prev{
                   margin-top:120px;
@@ -157,29 +160,21 @@
                               <span class="padding_10">Login</span></a>
                            </li>
                            <?php }else{ ?>
-
-<<<<<<< Updated upstream
                               <li><a href="login.php">
                               <i class="fa fa-user" style="display:none;" aria-hidden="true"></i>
-                              <div class="dropdown">
-                                 <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                 <span class="padding_10 "><?php echo $_COOKIE['user']; ?></span>
-                                 </button>
-                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <li><button class="dropdown-item" type="button">Account</button></li>
-                                    <li><button class="dropdown-item" type="button">Payment</button></li>
-									         <li><button class="dropdown-item" type="button">History</button></li>
-                                    <li><button class="dropdown-item" type="button">Logout</button></li>
-                                 </ul>
-                            </div></a>
-							   </li>
-=======
-                            <li><a href="signup.php">
-                              <i class="fa fa-user" aria-hidden="true"></i>
-                              <span class="padding_10"><?php echo $_COOKIE['user']; ?></span></a>
-                           </li>
->>>>>>> Stashed changes
+                        <div class="dropdown">
+                           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                           <span class="padding_10 "><?php echo $_COOKIE['user']; ?></span>
+                           </a>
 
+                           <ul class="dropdown-menu linktext" aria-labelledby="dropdownMenuLink">
+                              <li><a class="btn btn-secondary dropdown-item" href="profile.php">Account</a></li>
+                              <li><a class="btn btn-secondary dropdown-item" href="#">Payment</a></li>
+                              <li><a class="btn btn-secondary dropdown-item" href="#">History</a></li>
+                              <li><a class="btn btn-secondary dropdown-item" href="#">Log Out</a></li>
+                           </ul>
+                        </div></a>
+							   </li>
                            <?php }
                            ?>
                         </ul>
