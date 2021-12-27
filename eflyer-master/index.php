@@ -159,7 +159,7 @@
                            <?php }else{ ?>
 
 <<<<<<< Updated upstream
-                              <li><a href="login.html">
+                              <li><a href="login.php">
                               <i class="fa fa-user" style="display:none;" aria-hidden="true"></i>
                               <div class="dropdown">
                                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">

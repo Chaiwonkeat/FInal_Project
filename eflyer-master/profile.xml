@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <account>
+        <member>
+            <name>Xin Ling</name>
+            <birthday>1995-05-30</birthday>
+            <gender>Female</gender>
+            <address>No 20, Jalan Sunway 2/10 Bandar Sunway Semenyih 43500 Semenyih Selangor.</address>
+            <email>Xinling@gmail.com</email>
+            <password>xinling1234</password>
+        </member>
+    </account>

@@ -251,7 +251,7 @@ if(isset($_POST['submitSave'])) {
                <div class="form-group">
                   <button type="submit" class="btn btn-primary btn-lg bot" name="submitSave" style="font-size: 20px;">CREATE ACCOUNT</button>
                </div>
-         <div class="text-center">Already have an account? <a href="login.html">Log in</a></div>
+         <div class="text-center">Already have an account? <a href="login.php">Log in</a></div>
          </form>
       </div>
       <!-- jewellery  section end -->
