@@ -212,7 +212,7 @@
             <?php echo $member->password; ?>
             </div>
         </div>
-            <div class="right"><a class="btn btn-secondary" href="index.php" role="button">Edit</a></div>
+            <div class="right"><a class="btn btn-secondary" href="update.php?member=<?php echo $member['member']; ?>" role="button">Edit</a></div>
         <?php } ?>
       </div>
       <!-- jewellery  section end -->
