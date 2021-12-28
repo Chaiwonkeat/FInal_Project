@@ -1,62 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
-  <news>
+
     <product id="1">
       <name>Active Tech T-Shirt</name>
       <price>30.00</price>
       <path>images/news-1.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="2">
       <name>Washed Woven Sleep Set</name>
       <price>49.00</price>
       <path>images/news-2.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="3">
       <name>Smoothing Bike Short</name>
       <price>59.00</price>
       <path>images/news-3.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="4">
       <name>Smoothing Bike Short</name>
       <price>39.00</price>
       <path>images/news-4.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="5">
       <name>Smoothing Bike Short</name>
       <price>49.00</price>
       <path>images/news-5.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="6">
       <name>Smoothing Bike Short</name>
       <price>59.00</price>
       <path>images/news-6.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="7">
       <name>Smoothing Bike Short</name>
       <price>30.00</price>
       <path>images/news-7.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="8">
       <name>Smoothing Bike Short</name>
       <price>49.00</price>
       <path>images/news-8.jpg</path>
+		<categories>news</categories>
     </product>
     <product id="9">
       <name>Smoothing Bike Short</name>
       <price>59.00</price>
       <path>images/news-9.jpg</path>
+		<categories>news</categories>
     </product>
-  </news>
-  <men>
+ 
     <product id="10">
       <name>Tbar Collab Music T-Shirt</name>
       <price>29.00</price>
       <path>images/men-1.jpg</path>
+		<categories>men</categories>
     </product>
     <product id="11">
       <name>Graphic T</name>
       <price>29.00</price>
       <path>images/men-2.jpg</path>
+		<categories>men</categories>
     </product>
     <product id="12">
       <name>Loose Fit T-Shirt</name>
@@ -67,11 +77,13 @@
       <name>Brunswick Shirt</name>
       <price>69.00</price>
       <path>images/men-4.jpg</path>
+		<categories>men</categories>
     </product>
     <product id="14">
       <name>Slim Fit Jean</name>
       <price>69.00</price>
       <path>images/men-5.jpg</path>
+		<categories>men</categories>
     </product>
     <product id="15">
       <name>Skinny Stretch Chino</name>
@@ -82,33 +94,37 @@
       <name>Essential Fleece Pullover</name>
       <price>99.00</price>
       <path>images/men-7.jpg</path>
+		<categories>men</categories>
     </product>
     <product id="17">
       <name>Kakao Friends Fleece Pullover</name>
       <price>99.00</price>
       <path>images/men-8.jpg</path>
+		<categories>men</categories>
     </product>
     <product id="18">
       <name>Heavy Overshirt</name>
       <price>99.00</price>
       <path>images/men-9.jpg</path>
+		<categories>men</categories>
     </product>
-  </men>
-  <women>
     <product id="19">
       <name>Woven Petite Tea Dress</name>
       <price>69.00</price>
       <path>images/women-1.jpg</path>
+		<categories>women</categories>
     </product>
     <product id="20">
       <name>Lara Shoulder Mini Dress</name>
       <price>69.00</price>
       <path>images/women-2.jpg</path>
+		<categories>women</categories>
     </product>
     <product id="21">
       <name>Set Up Cami</name>
       <price>69.00</price>
       <path>images/women-3.jpg</path>
+		<categories>women</categories>
     </product>
     <product id="22">
       <name>High Neck Crew Tank</name>
@@ -119,26 +135,31 @@
       <name>Essential Midi Skirt</name>
       <price>59.00</price>
       <path>images/women-5.jpg</path>
+		<categories>women</categories>
     </product>
     <product id="24">
       <name>Woven Tawni Tiered Mini Skirt</name>
       <price>59.00</price>
       <path>images/women-6.jpg</path>
+		<categories>women</categories>
     </product>
     <product id="25">
       <name>Essential Midi Skirt</name>
       <price>99.00</price>
       <path>images/women-7.jpg</path>
+		<categories>women</categories>
     </product>
     <product id="26">
       <name>Everyday Crop Cardi</name>
       <price>99.00</price>
       <path>images/women-8.jpg</path>
+		<categories>women</categories>
     </product>
     <product id="27">
       <name>Cotton Cropped Pullover</name>
       <price>99.00</price>
       <path>images/women-9.jpg</path>
+		<categories>women</categories>
     </product>
-  </women>
+ 
 </products>

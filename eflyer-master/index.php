@@ -235,7 +235,7 @@
                      <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
                         <div class="row">
-                           <div class="col-lg-4 col-sm-4">
+                          <!-- <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Square Toe Slide Slipper</h4>
                                  <div class="tshirt_img"><img src="images/news-1.jpg"></div>
@@ -254,8 +254,8 @@
                                     <div class="seemore_bt"><a href="#">See More</a></div>
                                  </div>
                               </div>
-                           </div>
-                           <div class="col-lg-4 col-sm-4">
+                           </div>-->
+                          <!-- <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Washed Woven Sleep Set</h4>
                                  <div class="tshirt_img"><img src="images/news-2.jpg"></div>
@@ -274,8 +274,8 @@
                                     <div class="seemore_bt"><a href="#">See More</a></div>
                                  </div>
                               </div>
-                           </div>
-                           <div class="col-lg-4 col-sm-4">
+                           </div>-->
+                           <!--<div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Smoothing  Bike Short</h4>
                                  <div class="tshirt_img"><img src="images/news-3.jpg"></div>
@@ -294,13 +294,13 @@
                                     <div class="seemore_bt"><a href="#">See More</a></div>
                                  </div>
                               </div>
-                           </div>
+                           </div>-->
                         </div>
                      </div>
                   </div>
                </div>
                <?php
-               $products = simplexml_load_file('product.xml'); //load the files xml . 
+              // $products = simplexml_load_file('product.xml'); //load the files xml . 
                 echo 'Number of products: '.count($products); // count the number products
                // echo '<br>List Product Information';
                 ?>
@@ -309,10 +309,12 @@
                   <div class="container">
                      <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
-                        <div class="row">   <?php foreach($products->news as $news) { ?>
+                        <div class="row">   <?php foreach($products as $news) {?>
                            <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text"><?php echo $news->product->name; ?></h4>
+                                 <h4 class="shirt_text"><?php echo $news->product->name; //echo 'Number of products: '.count($news);
+                                
+                                    ?></h4>
                                  <div class="tshirt_img"><img src="<?php echo $news->product->path; ?>"></div>
                                  <p class="price_text">Price : <span style="color: #262626;">RM<?php echo $news->product->price; ?></span></p>
                                  <div class="rating-css">
@@ -324,13 +326,14 @@
                                     </div>
                                   </div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="index.php/?id=<?php echo $news['id']; ?>">Buy Now</a></div>
-                                    <div class="seemore_bt"><a href="product_details/?id=<?php echo $news['id']; ?>">See More</a></div>
+                                    <div class="buy_bt"><a href="index.php/?id=<?php echo $news->product['id']; ?>">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="product_details/?id=<?php echo $news->product['id']; ?>">See More</a></div>
                                  </div>
                               </div>
                            </div>
                            
-                             <?php } ?>
+                             <?php 
+                             } ?>
                         </div>
                      </div>
                   </div>
@@ -342,7 +345,7 @@
                      <h1 class="fashion_taital">News</h1>
                      <div class="fashion_section_2">
                         <div class="row">
-                           <div class="col-lg-4 col-sm-4">
+                           <!--<div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Active Tech T-Shirt</h4>
                                  <div class="tshirt_img"><img src="images/news-7.jpg"></div>
@@ -360,8 +363,8 @@
                                     <div class="seemore_bt"><a href="#">See More</a></div>
                                  </div>
                               </div>
-                           </div>
-                           <div class="col-lg-4 col-sm-4">
+                           </div>-->
+                          <!-- <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Mens Toweling Gown</h4>
                                  <div class="tshirt_img"><img src="images/news-8.jpg"></div>
@@ -379,8 +382,8 @@
                                     <div class="seemore_bt"><a href="#">See More</a></div>
                                  </div>
                               </div>
-                           </div>
-                           <div class="col-lg-4 col-sm-4">
+                           </div>-->
+                          <!-- <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
                                  <h4 class="shirt_text">Lounge T-Shirt</h4>
                                  <div class="tshirt_img"><img src="images/news-9.jpg"></div>
@@ -398,13 +401,14 @@
                                     <div class="seemore_bt"><a href="#">See More</a></div>
                                  </div>
                               </div>
-                           </div>
+                           </div>-->
                         </div>
                      </div>
                   </div>
                </div>
 
             </div>
+            <!--left and right section -->
             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
             <i class="fa fa-angle-left"></i>
             </a>
