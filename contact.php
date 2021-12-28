@@ -1,13 +1,14 @@
 <?php
 if(isset($_POST['submitSave'])) {
-	$signup = simplexml_load_file('signup.xml');
-	$product = $signup->addChild('members');
-	$product->addChild('name', $_POST['name']);
-	$product->addChild('email', $_POST['email']);
-	$product->addChild('password', $_POST['password']);
-	$product->addChild('repeat_password', $_POST['repeat_password']);
-	file_put_contents('signup.xml', $signup->asXML());
-	header('location:login.php?j='.$_POST['email']);//pass the parameter second ->login page
+	$signup = simplexml_load_file('contact.xml');
+	$product = $signup->addChild('customer');
+	$product->addChild('firstname', $_POST['firstname']);
+	$product->addChild('lastname', $_POST['lastname']);
+    $product->addChild('email', $_POST['email']);
+    $product->addChild('phone', $_POST['phone']);
+    $product->addChild('comments', $_POST['comments']);
+	file_put_contents('contact.xml', $signup->asXML());
+	//header('location:index.php');
 }
 ?>
 
@@ -107,20 +108,26 @@ if(isset($_POST['submitSave'])) {
         }
         .signup-form .btn:hover, .signup-form .btn:focus {
             background: #00b3b3 !important;
-        }
+         }
         .signup-form a {
             color: #00c1c0;
             text-decoration: none;
-        }	
+         }	
         .signup-form a:hover {
             text-decoration: underline;
-        }
+         }
         .form-group{
             text-align: center;
-        }
-        .bot{
-            padding: 10px 80px;
-        }
+         }
+        .tex{
+            text-align: center;
+         }
+         .ter{
+            padding-bottom:40px;
+         }
+         .bot{
+            padding: 8px 80px;
+         }
         </style>
     </head>
    <body>
@@ -151,7 +158,7 @@ if(isset($_POST['submitSave'])) {
                      <a href="men.html">Men</a>
                      <a href="women.html">Women</a>
                      <a href="#">About</a>
-                     <a href="#">Contact</a>
+                     <a href="contact.html">Contact</a>
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
                   <div class="main">
@@ -172,7 +179,7 @@ if(isset($_POST['submitSave'])) {
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               <span class="padding_10">Cart</span></a>
                            </li>
-                           <li><a href="login.php">
+                           <li><a href="#">
                               <i class="fa fa-user" aria-hidden="true"></i>
                               <span class="padding_10">Login</span></a>
                            </li>
@@ -226,33 +233,42 @@ if(isset($_POST['submitSave'])) {
       </div>
       <!-- banner bg main end -->
       <!-- jewellery  section start -->
-      <div class="signup-form">
-         <form action="" method="post">
-               <h2>Sign Up</h2>
-         <h5>Name</h5>
-               <div class="form-group">
-                  <input type="text" class="form-control" name="name" placeholder="Name" required="required">
-               </div>
-         <h5>E-mail</h5>
-               <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="E-mail" required="required">
-               </div>
-         <h5>Password</h5>
-               <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-               </div>
-         <h5>Repeat Password</h5>
-               <div class="form-group">
-                  <input type="password" class="form-control" name="repeat_password" placeholder="Repeat Password" required="required">
-               </div>        
-               <div class="form-group">
-                  <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
-               </div>
-               <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-lg bot" name="submitSave" style="font-size: 20px;">CREATE ACCOUNT</button>
-               </div>
-         <div class="text-center">Already have an account? <a href="login.php">Log in</a></div>
-         </form>
+      <div class="container">
+    <div class="row">
+        <h1>Contact Us!</h1>
+        <form class="row g-3" action="" method="POST">
+          <!-- Honeypot -->
+          <input type="text" name="_honey" style="display: none;">
+
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <input type="hidden" name="_next" value="success.html" >
+
+          <div class="col-xs-6 col-md-4">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="firstname" class="form-control" name="firstname" id="firstName" required>
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="lastname" class="form-control" name="lastname" id="lastName" required>
+          </div>
+          <div class="col-md-8">
+            <label for="emailInfo" class="form-label">E-mail</label>
+            <input type="email" class="form-control" name="email" id="emailInfo" required>
+          </div>
+          <div class="col-md-4">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" name="phone" id="phoneNumber" placeholder="phone number" pattern="[0-9]{3}-[0-9]{2}[0-9]{5}">
+          </div>
+          <div class="col-md-12">
+            <label for="comments" class="form-label">Comments, questions?</label>
+            <textarea class="form-control" id="comments" name="comments,&nbsp;questions" rows="3" required cols="50" minlength="3" maxlength="30"></textarea>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
       </div>
       <!-- jewellery  section end -->
       <!-- footer section start -->
